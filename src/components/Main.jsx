@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Customers from './Customers'
-import Flags from './Flags'
+import Adventurers from './Adventurers'
+import Home from './Home'
 
 import styles from '../css/Base.scss'
 
@@ -15,9 +15,8 @@ class Main extends React.Component {
     return (
       <main className={styles.inset}>
         <Switch>
-          <Route exact path="/" component={Flags} />
-          <Route path="/flags" component={Flags} />
-          <Route path="/customers" component={Customers} />
+          <Route exact path="/" component={Home} />
+          <Route path="/adventurers" component={Adventurers} />
         </Switch>
       </main>
     )

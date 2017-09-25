@@ -6,13 +6,11 @@ import classnames from 'classnames'
 import buttons from '../css/_buttons.scss'
 
 class Header extends React.Component {
-  isFlags(match, location) {
+  isHome(match) {
     if (!match) {
       return false
-    } else if (match.isExact) {
-      return true
     } else {
-      return location.pathname.indexOf('/flags/') === 0
+      return match.isExact
     }
   }
   render() {
@@ -23,20 +21,20 @@ class Header extends React.Component {
             <li>
               <NavLink
                 className={styles.link}
-                isActive={this.isFlags}
+                isActive={this.isHome}
                 activeClassName={buttons.activeNav}
                 to="/"
               >
-                Flags
+                Home
               </NavLink>
             </li>
             <li>
               <NavLink
                 className={styles.link}
                 activeClassName={buttons.activeNav}
-                to="/customers"
+                to="/adventurers"
               >
-                Customers
+                Adventurers
               </NavLink>
             </li>
           </ul>
