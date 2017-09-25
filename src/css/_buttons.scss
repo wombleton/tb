@@ -1,0 +1,140 @@
+@import 'variables';
+.activeNav {
+  box-shadow: inset 0 -3px 0 0 #d0d2d4;
+  color: #43454a;
+}
+.button {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  margin: 0 5px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+
+  &.dropdown-toggle {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .input-group-btn > & {
+    margin-left: -1px;
+    position: relative;
+  }
+}
+
+.defaultButton {
+  @extend .button;
+  background: #fff;
+  border: 1px solid #d0d2d4;
+  color: #43454a;
+  &:focus,
+  &:hover {
+    box-shadow: inset 0 -3px 0 0 #d0d2d4;
+    color: #43454a;
+  }
+  &:active,
+  &.btn-working {
+    background: #eee;
+  }
+  &:active,
+  .dropdown.open &.dropdown-toggle {
+    box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.primaryButton {
+  @extend .button;
+  background: #516eb7;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+  &:focus,
+  &:hover {
+    box-shadow: inset 0 -3px 0 0 #354e8d;
+    color: #fff;
+  }
+  &:active,
+  &.btn-working {
+    background-color: #354e8d;
+  }
+  &:active,
+  .dropdown.open &.dropdown-toggle {
+    box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.dangerButton {
+  @extend .button;
+  background: #dd3541;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #fff;
+  &:focus,
+  &:hover {
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  &:active,
+  &.btn-working {
+    background-color: #bc3641;
+  }
+  &:active,
+  .dropdown.open &.dropdown-toggle {
+    box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.mild-danger-btn {
+  background: #fff;
+  border: 1px solid #d0d2d4;
+  color: #dd3541;
+  &:focus,
+  &:hover {
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2);
+    color: #dd3541;
+  }
+  &:active,
+  .dropdown.open &.dropdown-toggle {
+    box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.subtleButton {
+  @extend .button;
+  background: inherit;
+  border: none;
+  color: #43454a;
+  &:focus,
+  &:hover {
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2);
+    color: #43454a;
+  }
+  &:active,
+  .dropdown.open &.dropdown-toggle {
+    box-shadow: inset 0 3px 0 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.largeButton {
+  font-size: 14px;
+  padding: 14px 30px;
+}
+.smallButton {
+  font-size: 12px;
+  padding: 6px 15px;
+}
+.xsButton {
+  font-size: 10px;
+  padding: 3px 8px;
+}

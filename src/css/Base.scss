@@ -1,0 +1,35 @@
+@import './variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Open%20Sans:300,400,600,700');
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: $text-color;
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.inset {
+  margin: 0 40px 40px;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.svgIcon {
+  height: calc(1em + 2px);
+  width: calc(1em + 2px);
+  vertical-align: middle;
+  display: inline-block;
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>circle-information</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M8,14 C11.3137085,14 14,11.3137085 14,8 C14,4.6862915 11.3137085,2 8,2 C4.6862915,2 2,4.6862915 2,8 C2,11.3137085 4.6862915,14 8,14 Z M8,15 C4.13400675,15 1,11.8659932 1,8 C1,4.13400675 4.13400675,1 8,1 C11.8659932,1 15,4.13400675 15,8 C15,11.8659932 11.8659932,15 8,15 Z M8.00996678,6 C8.27131914,6 8.50166013,5.91081472 8.70099668,5.73244147 C8.90033322,5.55406823 9,5.3088087 9,4.99665552 C9,4.71571766 8.90476286,4.47937666 8.71428571,4.28762542 C8.52380857,4.09587418 8.28903794,4 8.00996678,4 C7.72646591,4 7.48726565,4.09587418 7.2923588,4.28762542 C7.09745196,4.47937666 7,4.71571766 7,4.99665552 C7,5.31326803 7.10077419,5.55964237 7.30232558,5.73578595 C7.50387698,5.91192953 7.73975502,6 8.00996678,6 Z M7,8 L7,11 C7,11 7,12 8,12 C9,12 9,11 9,11 L9,8 C9,8 9,7 8,7 C7,7 7,8 7,8 Z" id="path-1"></path>
+    </defs>
+    <g id="Core-Style" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <g id="Iconography" transform="translate(-481.000000, -409.000000)">
+            <g id="16px-Icons" transform="translate(128.000000, 254.000000)">
+                <g id="16px-icons" transform="translate(16.000000, 58.000000)">
+                    <g id="circle-information" transform="translate(336.000000, 96.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <g id="BG-icon-dark" mask="url(#mask-2)" fill-rule="evenodd" fill="#434A54">
+                            <rect id="434A54" x="0" y="0" width="17" height="17"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

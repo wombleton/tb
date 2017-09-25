@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>filter</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6.85455577,7.14644661 C6.94832396,7.2402148 7.00100238,7.36739176 7.00100238,7.5 L7.00100238,12.2928932 L9.00100238,14.2928932 L9.00100238,7.5 C9.00100238,7.38303175 9.04201049,7.2697653 9.11689174,7.1799078 L13,2 L3,2 L6.85455577,7.14644661 Z M1.64644661,1.85355339 C1.33146418,1.53857096 1.55454757,1 2,1 L14,1 C14.4239188,1 14.6554969,1.49442874 14.3841106,1.8200922 L10.0010024,7.68102497 L10.0010024,15.5 C10.0010024,15.9454524 9.46243142,16.1685358 9.14744899,15.8535534 L6.14744899,12.8535534 C6.0536808,12.7597852 6.00100238,12.6326082 6.00100238,12.5 L6.00100238,7.70710678 L1.64644661,1.85355339 Z" id="path-1"></path>
+    </defs>
+    <g id="Core-Style" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+        <g id="Iconography" transform="translate(-337.000000, -313.000000)">
+            <g id="16px-Icons" transform="translate(128.000000, 254.000000)">
+                <g id="16px-icons" transform="translate(16.000000, 58.000000)">
+                    <g id="filter" transform="translate(192.000000, 0.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <g id="BG-icon-dark" mask="url(#mask-2)" fill-rule="evenodd" fill="#434A54">
+                            <rect id="434A54" x="0" y="0" width="17" height="17"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
