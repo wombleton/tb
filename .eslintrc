@@ -21,6 +21,7 @@ parserOptions:
     forOf: true
     blockBindings: true
     arrowFunctions: true
+  ecmaVersion: 7
 
 env:
   browser: true
