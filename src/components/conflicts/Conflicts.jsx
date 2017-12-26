@@ -11,7 +11,7 @@ export default class Conflicts extends React.Component {
     return (
       <Switch>
         <Route exact path="/conflicts" component={ConflictsIndex} />
-        <Route path="/conflicts/:id" component={Conflict} />
+        <Route path="/conflicts/:conflictId" component={Conflict} />
       </Switch>
     )
   }
