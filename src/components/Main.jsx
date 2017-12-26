@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Adventurers from './Adventurers'
+import Conflicts from './conflicts/Conflicts'
 import Home from './Home'
 
 import styles from '../css/Base.scss'
@@ -17,6 +18,7 @@ class Main extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/adventurers" component={Adventurers} />
+          <Route path="/conflicts" component={Conflicts} />
         </Switch>
       </main>
     )

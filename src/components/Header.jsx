@@ -2,16 +2,14 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import styles from '../css/Header.scss'
-import classnames from 'classnames'
 import buttons from '../css/_buttons.scss'
 
 class Header extends React.Component {
   isHome(match) {
     if (!match) {
       return false
-    } else {
-      return match.isExact
     }
+    return match.isExact
   }
   render() {
     return (
@@ -35,6 +33,15 @@ class Header extends React.Component {
                 to="/adventurers"
               >
                 Adventurers
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={styles.link}
+                activeClassName={buttons.activeNav}
+                to="/conflicts"
+              >
+                Conflicts
               </NavLink>
             </li>
           </ul>
