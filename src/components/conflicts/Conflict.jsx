@@ -4,7 +4,7 @@ import _ from 'lodash'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { firebaseConnect } from 'react-redux-firebase'
-import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card'
+import { Card, CardHeader } from 'material-ui/Card'
 
 const enhance = compose(
   firebaseConnect(props => [
@@ -12,9 +12,9 @@ const enhance = compose(
   ]),
   connect((state, props) => ({
     conflict: _.get(
-        state,
-        `firebase.data.conflicts.${props.match.params.conflictId}`
-      ),
+      state,
+      `firebase.data.conflicts.${props.match.params.conflictId}`
+    ),
   }))
 )
 

@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 import { Link } from 'react-router-dom'
-import FlatButton from 'material-ui/FlatButton'
 import { List, ListItem } from 'material-ui/List'
 import { FormattedRelative } from 'react-intl'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { firebaseConnect, isLoaded, isEmpty } from 'react-redux-firebase'
+
+import AddConflict from './AddConflict'
 
 class ConflictsIndex extends React.Component {
   _addConflict = () => {
@@ -41,7 +42,7 @@ class ConflictsIndex extends React.Component {
     return (
       <div>
         <h1>Conflicts</h1>
-        <FlatButton label="Add" onClick={this._addConflict} />
+        <AddConflict history={this.props.history} />
         {conflictsList}
       </div>
     )
@@ -51,10 +52,12 @@ class ConflictsIndex extends React.Component {
 ConflictsIndex.defaultProps = {
   conflicts: undefined,
   firebase: undefined,
+  history: undefined,
 }
 ConflictsIndex.propTypes = {
   conflicts: PropTypes.object,
   firebase: PropTypes.object,
+  history: PropTypes.object,
 }
 
 export default compose(
