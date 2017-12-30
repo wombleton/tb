@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import _ from 'lodash'
 import { Link } from 'react-router-dom'
-import { List, ListItem } from 'material-ui/List'
+import { List, ListItem, RefreshIndicator } from 'material-ui'
 import { FormattedRelative } from 'react-intl'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
@@ -20,17 +20,25 @@ class ConflictsIndex extends React.Component {
     const { conflicts } = this.props
 
     if (!isLoaded(conflicts)) {
-      return 'loading'
+      return (
+        <RefreshIndicator
+          left={0}
+          top={0}
+          style={{ position: 'relative' }}
+          status="loading"
+        />
+      )
     } else if (isEmpty(conflicts)) {
       return 'empty'
     }
     const items = _.map(conflicts, (conflict, key) => {
-      const { createdAt } = conflict
+      const { createdAt, title } = conflict
       return (
         <ListItem
           key={key}
           containerElement={<Link to={`/conflicts/${key}`} />}
         >
+          <span>{title || '—'}</span>
           <FormattedRelative value={new Date(createdAt)} />
         </ListItem>
       )

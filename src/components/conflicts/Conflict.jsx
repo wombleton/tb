@@ -4,7 +4,7 @@ import _ from 'lodash'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { firebaseConnect } from 'react-redux-firebase'
-import { Card, CardHeader } from 'material-ui/Card'
+import { Card, CardHeader, RefreshIndicator } from 'material-ui'
 
 const enhance = compose(
   firebaseConnect(props => [
@@ -23,14 +23,17 @@ class Conflict extends React.Component {
     const { conflict } = this.props
     if (!conflict) {
       return (
-        <Card>
-          <CardHeader title={'Loading...'} />
-        </Card>
+        <RefreshIndicator
+          left={0}
+          top={0}
+          style={{ position: 'relative' }}
+          status="loading"
+        />
       )
     }
     return (
       <Card>
-        <CardHeader title={conflict.createdAt} />
+        <CardHeader title={conflict.title} />
       </Card>
     )
   }
