@@ -6,21 +6,27 @@ import { compose } from 'redux'
 import { firebaseConnect } from 'react-redux-firebase'
 import { Card, CardHeader, RefreshIndicator } from 'material-ui'
 
+import RolePicker from './RolePicker'
+
 const enhance = compose(
   firebaseConnect(props => [
     { path: `conflicts/${props.match.params.conflictId}` },
   ]),
-  connect((state, props) => ({
-    conflict: _.get(
-      state,
-      `firebase.data.conflicts.${props.match.params.conflictId}`
-    ),
-  }))
+  connect((state, props) => {
+    const { conflictId } = props.match.params
+    return {
+      conflict: _.get(
+        state,
+        `firebase.data.conflicts.${props.match.params.conflictId}`
+      ),
+      conflictId,
+    }
+  })
 )
 
 class Conflict extends React.Component {
   render() {
-    const { conflict } = this.props
+    const { conflict, conflictId } = this.props
     if (!conflict) {
       return (
         <RefreshIndicator
@@ -31,9 +37,11 @@ class Conflict extends React.Component {
         />
       )
     }
+    const hasRolepicker = !conflict.gm || !conflict.locked
     return (
       <Card>
         <CardHeader title={conflict.title} />
+        {hasRolepicker && <RolePicker conflictId={conflictId} />}
       </Card>
     )
   }
@@ -41,8 +49,10 @@ class Conflict extends React.Component {
 
 Conflict.defaultProps = {
   conflict: undefined,
+  conflictId: undefined,
 }
 Conflict.propTypes = {
   conflict: PropTypes.object,
+  conflictId: PropTypes.string,
 }
 export default enhance(Conflict)
