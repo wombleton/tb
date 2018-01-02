@@ -4,8 +4,7 @@ import _ from 'lodash'
 import { withFirebase } from 'react-redux-firebase'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
-import { CardActions, FlatButton } from 'material-ui'
-import { CardText } from 'material-ui/Card'
+import { CardActions, Chip, FlatButton } from 'material-ui'
 
 class RolePicker extends React.Component {
   getJoinTools(users) {
@@ -27,6 +26,10 @@ class RolePicker extends React.Component {
     const { uid } = firebase.auth().currentUser
     firebase.set(`/conflicts/${conflictId}/users/${uid}/role`, 'gm')
   }
+  close = () => {
+    const { conflictId, firebase } = this.props
+    firebase.set(`/conflicts/${conflictId}/closed`, true)
+  }
   joinAsPlayer = () => {
     const { conflictId, firebase } = this.props
     const { uid } = firebase.auth().currentUser
@@ -34,16 +37,23 @@ class RolePicker extends React.Component {
   }
   render() {
     const { conflict = {}, firebase } = this.props
-    const { users } = conflict
+    const { closed, users } = conflict
     const { uid } = firebase.auth().currentUser
 
     const user = _.get(conflict, `users.${uid}`)
 
     if (user) {
       if (user.role === 'gm') {
-        return <CardText>You&quot;re the GM</CardText>
+        return (
+          <CardActions>
+            <Chip>GM</Chip>
+            {!closed && (
+              <FlatButton secondary label="Close" onClick={this.close} />
+            )}
+          </CardActions>
+        )
       }
-      return <CardText>You&quot;re a player </CardText>
+      return <Chip>Player</Chip>
     }
 
     return this.getJoinTools(users)

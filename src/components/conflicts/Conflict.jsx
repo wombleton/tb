@@ -37,7 +37,7 @@ class Conflict extends React.Component {
         />
       )
     }
-    const hasRolepicker = !conflict.gm || !conflict.locked
+    const hasRolepicker = !conflict.gm && !conflict.closed
     return (
       <Card>
         <CardHeader title={conflict.title} />
